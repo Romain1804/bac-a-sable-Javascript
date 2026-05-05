@@ -117,3 +117,98 @@ function returnadition(chiffrea,chiffreb)
 {return chiffrea+chiffreb}
 
 console.log(returnadition(12,23))
+
+//exo 7//
+
+/*role afficher le prompt d'une question
+paremetre la question
+retour : rien  */
+ function poserQuestion(laQuestion){
+
+    let rep = prompt(laQuestion)
+    return rep
+ }
+
+ console.log(poserQuestion("le ciel est t il bleu ?"))
+
+//correction //
+
+// on peut realiser la fonction  en notant : return prompt ( la question)
+
+//exo 8//
+
+/*role convertir un prix en dollar
+paremetre prix en euro
+retour : le prix en dollars  */
+
+function endollars (leprixeuro){
+    return leprixeuro*1.17
+}
+
+endollars(150)
+
+console.log(endollars(200))
+
+//correction//
+
+function conversion( prix, taux){
+    return prix*taux;
+}
+
+ let resultat = conversion(23,1.17)
+
+console.log(` le prix convertit est de ${resultat} dollar`)
+
+//exo 8 v2//
+
+/*role demander un taux et un prix et convertit
+paremetre prix et taux de change  
+retour : le prix convertit   */
+
+function convertisseur (){
+    //demande le prix
+     let unprix=parseFloat (prompt("quel prix veut tu convertir"))
+
+    // demande le taux //
+     let taux = parseFloat(prompt("quel est le taux"))
+
+    //convertit//
+
+    return unprix*taux
+    
+    //retourner le resultat//
+}
+
+let prixconvertit= convertisseur()
+
+alert(`le prix convertit est de ${prixconvertit} dollars `)
+
+
+//exo annexe moyenne //
+
+/*role calculer  la moyenne  a partir des note donné
+paremetre : rien
+retour :  la moyenne   */
+
+function lesmoyenne (){
+    // la note de math et convertir en type number//
+    let math= parseFloat(prompt("quel est la note de math"))
+
+    // la note de français et convertir en type number//
+    let français = parseFloat(prompt("quel est la note de français"))
+
+    // la note d'histoire et convertir en type number //
+    let histoire = parseFloat(prompt("quel est la note d'histoire"))
+
+    // la note de svt et convertir en type number//
+    let svt=parseFloat(prompt("quel est la note de svt"))
+
+    // calcul de la moyenne //
+
+    return (math+français+histoire+svt)/4
+// on peut aussi créer un let avec le calcul puis mettre la let dans le return//
+}
+
+ let lamoyenne =lesmoyenne()
+
+ alert(`la moyenne de l'eleve est de ${lamoyenne}`)
