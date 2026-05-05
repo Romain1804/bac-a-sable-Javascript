@@ -212,3 +212,9 @@ function lesmoyenne (){
  let lamoyenne =lesmoyenne()
 
  alert(`la moyenne de l'eleve est de ${lamoyenne}`)
+ 
+ /* operateur de comparaison 
+ == comporte les valeurs identique
+ === comporte strictement les meme valeurs et types 
+ != different
+ >< superieur et inferieur*/
