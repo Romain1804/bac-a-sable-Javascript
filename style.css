@@ -1,0 +1,16 @@
+.bcblue{background-color: blue;}
+
+.txtwhite{color: white;}
+
+.mb50{margin-bottom: 50px;}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spacebetween{justify-content: space-between;}
+
+.w30{width: 30%;}
+
+.txtcenter{text-align: center;}
