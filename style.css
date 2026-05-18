@@ -1,3 +1,9 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .cred{color: red;}
 
 .bgyellow{background-color: yellow;}
@@ -23,3 +29,45 @@
 .card{border: 4px black solid;width: 30%;}
 
 .btn{border: 2px solid; background-color: rgb(255, 0, 0);border-radius: 3px;}
+
+/* profil-utilisateur*/
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spacebetween{justify-content: space-between;
+}
+
+.large-30{
+    width: 30%;
+}
+
+.large-60{
+    width: 60%;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.radius15{
+    border-radius: 15px;
+}
+
+.card{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.gap32{gap: 32px}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
