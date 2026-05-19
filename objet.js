@@ -100,15 +100,7 @@ let recettes = [
         ingredients: ["laitue romaine", "croûtons", "parmesan râpé", "filet de poulet", "sauce César", "sel", "poivre"]
     }
 ];
-//recuperer les recettes une par une 
-recettes.forEach(plat => {
-    console.log(`le plat est ${plat.nom},
-                la difficulte est ${plat.difficulte}
-             temps de Preparation ${plat.tempPreparation}
-             temps de cuisson${plat.tempCuisson}
-             le nbr de portion ${plat.nbrPortions}
-             la liste des ingredient${plat.ingredients}`)
-});
+
 
 /*
 correction 
@@ -117,26 +109,29 @@ parametre tableau des recette
 return rien*/
 function ficherecette(recettes) {
     //recuperer les recette une par une 
-    recettes.forEach(plat => {
+    recettes.forEach(recette => {
         let listeingredient = ""
 
-        recettes.forEach(plat => {
-            listeingredient += `<li>${plat.ingredient}</li>
-            console.log(listeingredient)`
+        recette.ingredients.forEach(ingredient => {
+            listeingredient += `<li>${ingredient}</li>`
+            console.log(listeingredient)
         
     });
 
-    ajouteraubody(` <div class="bcblue txtwhite mb50 w30 txtcenter"> 
-        <h2>le plat est ${plat.nom}</h2>
-            <p>la difficulte est ${plat.difficulte}</p>
-            <p>temps de Preparation ${plat.tempPreparation}</p>
-             <p>temps de cuisson${plat.tempCuisson}</p>
-              <p> le nbr de portion ${plat.nbrPortions}</p>
-               <p>la liste des ingredient${plat.ingredients}</p>
-               
-               
-               
-               </div> `)
+    ajouteraubody(` 
+        <div class="bcblue txtwhite mb50 w30 txtcenter"> 
+            <h2>le plat est ${recette.nom}</h2>
+            <p>la difficulte est ${recette.difficulte}</p>
+            <p>temps de Preparation ${recette.tempPreparation}</p>
+            <p>temps de cuisson${recette.tempCuisson}</p>
+            <p> le nbr de portion ${recette.nbrPortions}</p>
+            <p>la liste des ingredient:</p>
+
+            <ul>
+               ${listeingredient}
+            </ul>
+         
+        </div> `)
 });
 }
 
